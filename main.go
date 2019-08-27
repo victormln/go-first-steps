@@ -11,8 +11,10 @@ func main() {
 	fmt.Printf(welcomeMessage, name)
 
 	age := getAge()
-	fmt.Scanf("%d", &age)
 	fmt.Println(age)
+
+	myNameInJapanese := generateNameInJapanese()
+	fmt.Print("Victor in japanese: ", myNameInJapanese)
 }
 
 func getName() string {
@@ -26,9 +28,13 @@ func getName() string {
 }
 
 func getAge() int {
-	var age int = 0
+	var age int
 	fmt.Print(insertAgeMessage)
 	fmt.Scanf("%d", &age)
 
 	return age
+}
+
+func generateNameInJapanese() string {
+	return "ビクター"
 }
