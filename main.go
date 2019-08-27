@@ -7,14 +7,28 @@ const insertAgeMessage = "How old are you?:"
 const welcomeMessage string = "Welcome %s!"
 
 func main() {
+	name := getName()
+	fmt.Printf(welcomeMessage, name)
+
+	age := getAge()
+	fmt.Scanf("%d", &age)
+	fmt.Println(age)
+}
+
+func getName() string {
 	var name string
 	name = "Default name"
-	var age = 0
-	withoutType := "Variable is set but without setting the type :)"
+
 	fmt.Print(insertNameMessage)
 	fmt.Scanf("%s", &name)
-	fmt.Printf(welcomeMessage, name)
+
+	return name
+}
+
+func getAge() int {
+	var age int = 0
 	fmt.Print(insertAgeMessage)
 	fmt.Scanf("%d", &age)
-	fmt.Println(age, withoutType)
+
+	return age
 }
