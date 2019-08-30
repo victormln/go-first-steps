@@ -4,62 +4,55 @@ import (
 	"fmt"
 	"strings"
 
+	/*"./array"
 	"./name"
 	"./numbers"
-	"./structure"
+	"./structure"*/
+	"./maps"
 )
 
 const welcomeMessage string = "Welcome %s!"
 
 func main() {
-	firstName := name.GetName()
-	fmt.Printf(welcomeMessage, firstName)
+	fmt.Println(maps.GetMap())
+	var name = "victor"
 
-	age := numbers.GetAge()
-	fmt.Println(age)
+	fmt.Println(maps.GetAgeFromName(name))
+	/*
+		firstName := name.GetName()
+		fmt.Printf(welcomeMessage, firstName)
 
-	myNameInJapanese := name.GenerateNameInJapanese()
-	fmt.Println("Victor in japanese: ", myNameInJapanese)
+		age := numbers.GetAge()
+		fmt.Println(age)
 
-	var resultOfSum = numbers.Sum(1, 9)
-	fmt.Println(resultOfSum)
+		myNameInJapanese := name.GenerateNameInJapanese()
+		fmt.Println("Victor in japanese: ", myNameInJapanese)
 
-	int32, int16, int64 := numbers.GetVariables()
-	fmt.Println(int16, int32, int64)
+		var resultOfSum = numbers.Sum(1, 9)
+		fmt.Println(resultOfSum)
 
-	float32, float64 := numbers.GetFloat()
-	fmt.Println(float32, float64)
+		int32, int16, int64 := numbers.GetVariables()
+		fmt.Println(int16, int32, int64)
 
-	var text = "testing"
-	fmt.Println("Extract letter from", text, "(", string("testing"[1]), ")")
-	fmt.Println(len(string("testing")))
+		float32, float64 := numbers.GetFloat()
+		fmt.Println(float32, float64)
 
-	getArray()
+		var text = "testing"
+		fmt.Println("Extract letter from", text, "(", string("testing"[1]), ")")
+		fmt.Println(len(string("testing")))
 
-	getSlice()
+		array.GetArray()
 
-	structure.IfTest()
+		array.GetSlice()
 
-	structure.ForTest()
+		structure.IfTest()
 
-	strings2()
+		structure.ForTest()
 
-	structure.SwitchTest()
-}
+		strings2()
 
-func getArray() {
-	var typeOfCar [2]string
-	randomNumbers := [3]int{5, 3, 12}
-	fmt.Println(randomNumbers)
-	typeOfCar[0] = "electric"
-	typeOfCar[1] = "gasoil"
-	fmt.Println(typeOfCar)
-}
-
-func getSlice() {
-	var slice []string
-	slice = append(slice, "hola", "que", "tal")
-	fmt.Println(slice)
+		structure.SwitchTest()
+	*/
 }
 
 func strings2() {
