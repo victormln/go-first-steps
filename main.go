@@ -3,29 +3,31 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"./name"
+	"./numbers"
+	"./structure"
 )
 
-const insertNameMessage = "Insert your name: "
-const insertAgeMessage = "\nHow old are you?: "
 const welcomeMessage string = "Welcome %s!"
 
 func main() {
-	name := getName()
-	fmt.Printf(welcomeMessage, name)
+	firstName := name.GetName()
+	fmt.Printf(welcomeMessage, firstName)
 
-	age := getAge()
+	age := numbers.GetAge()
 	fmt.Println(age)
 
-	myNameInJapanese := generateNameInJapanese()
+	myNameInJapanese := name.GenerateNameInJapanese()
 	fmt.Println("Victor in japanese: ", myNameInJapanese)
 
-	var resultOfSum = sum(1, 9)
+	var resultOfSum = numbers.Sum(1, 9)
 	fmt.Println(resultOfSum)
 
-	int32, int16, int64 := getVariables()
+	int32, int16, int64 := numbers.GetVariables()
 	fmt.Println(int16, int32, int64)
 
-	float32, float64 := getFloat()
+	float32, float64 := numbers.GetFloat()
 	fmt.Println(float32, float64)
 
 	var text = "testing"
@@ -36,41 +38,13 @@ func main() {
 
 	getSlice()
 
-	ifTest()
+	structure.IfTest()
 
-	forTest()
+	structure.ForTest()
 
 	strings2()
-}
 
-func getName() string {
-	var name string
-	name = "Default name"
-
-	fmt.Print(insertNameMessage)
-	fmt.Scanf("%s", &name)
-
-	return name
-}
-
-func getAge() int {
-	var age int
-	fmt.Print(insertAgeMessage)
-	fmt.Scanf("%d", &age)
-
-	return age
-}
-
-func generateNameInJapanese() string {
-	return "ビクター"
-}
-
-func getVariables() (int, int16, int64) {
-	return 212, 1, 12312412412412
-}
-
-func getFloat() (float32, float64) {
-	return float32(0.1), float64(float32(0.1))
+	structure.SwitchTest()
 }
 
 func getArray() {
@@ -86,59 +60,6 @@ func getSlice() {
 	var slice []string
 	slice = append(slice, "hola", "que", "tal")
 	fmt.Println(slice)
-}
-
-func sum(number1 int, number2 int) int {
-	return number1 + number2
-}
-
-func ifTest() {
-	var number = 0
-	fmt.Println("Ingresa un numero del 1 al 10")
-	fmt.Scanf("%d", &number)
-	if number%2 == 0 {
-		fmt.Println("Numero par")
-	} else {
-		fmt.Println("Numero impar")
-	}
-
-	if number2 := 3; number2 == 3 {
-		fmt.Println("Dentro!")
-	}
-}
-
-func forTest() {
-	standardFor()
-
-	loopWithoutInitializeIntoit()
-
-	infiniteLoopWithBreak()
-}
-
-func standardFor() {
-	for counter := 0; counter < 3; counter++ {
-		fmt.Print(counter, ", ")
-	}
-	fmt.Println()
-}
-
-func loopWithoutInitializeIntoit() {
-	c := 6
-	for ; c > 0; c = c - 2 {
-		fmt.Print(c, " ")
-	}
-}
-
-func infiniteLoopWithBreak() {
-	fmt.Println()
-	s := 1000
-	for {
-		s -= 1000
-		if s == 0 {
-			fmt.Println("Ha acabado el for")
-			break
-		}
-	}
 }
 
 func strings2() {
