@@ -4,19 +4,23 @@ import (
 	"fmt"
 	"strings"
 
-	/*"./array"
-	"./name"
-	"./numbers"
-	"./structure"*/
-	"./maps"
+	/*"workspace/array"
+	"workspace/name"
+	"workspace/numbers"
+	"workspace/structure"*/
+	"workspace/maps"
 )
 
 const welcomeMessage string = "Welcome %s!"
 
 func main() {
+	fmt.Println("==================")
+	fmt.Print("Map content: ")
 	fmt.Println(maps.GetMap())
 	var name = "victor"
 
+	fmt.Println("==================")
+	fmt.Print("Age for " + name + ": ")
 	fmt.Println(maps.GetAgeFromName(name))
 	/*
 		firstName := name.GetName()
