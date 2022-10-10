@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 	"strings"
-
-	/*"workspace/array"
+	"workspace/array"
+	"workspace/maps"
 	"workspace/name"
 	"workspace/numbers"
-	"workspace/structure"*/
-	"workspace/maps"
+	"workspace/structure"
 )
 
 const welcomeMessage string = "Welcome %s!"
@@ -17,46 +16,44 @@ func main() {
 	fmt.Println("==================")
 	fmt.Print("Map content: ")
 	fmt.Println(maps.GetMap())
-	var name = "victor"
+	var testName = "victor"
 
 	fmt.Println("==================")
-	fmt.Print("Age for " + name + ": ")
-	fmt.Println(maps.GetAgeFromName(name))
-	/*
-		firstName := name.GetName()
-		fmt.Printf(welcomeMessage, firstName)
+	fmt.Print("Age for " + testName + ": ")
+	fmt.Println(maps.GetAgeFromName(testName))
+	firstName := name.AskForName()
+	fmt.Printf(welcomeMessage, firstName)
 
-		age := numbers.GetAge()
-		fmt.Println(age)
+	age := numbers.AskForAge()
+	fmt.Println(age)
 
-		myNameInJapanese := name.GenerateNameInJapanese()
-		fmt.Println("Victor in japanese: ", myNameInJapanese)
+	myNameInJapanese := name.GenerateNameInJapanese()
+	fmt.Println("Victor in japanese: ", myNameInJapanese)
 
-		var resultOfSum = numbers.Sum(1, 9)
-		fmt.Println(resultOfSum)
+	var resultOfSum = numbers.Sum(1, 9)
+	fmt.Println(resultOfSum)
 
-		int32, int16, int64 := numbers.GetVariables()
-		fmt.Println(int16, int32, int64)
+	int32, int16, int64 := numbers.GetVariables()
+	fmt.Println(int16, int32, int64)
 
-		float32, float64 := numbers.GetFloat()
-		fmt.Println(float32, float64)
+	float32, float64 := numbers.GetFloat()
+	fmt.Println(float32, float64)
 
-		var text = "testing"
-		fmt.Println("Extract letter from", text, "(", string("testing"[1]), ")")
-		fmt.Println(len(string("testing")))
+	var text = "testing"
+	fmt.Println("Extract letter from", text, "(", string("testing"[1]), ")")
+	fmt.Println(len(string("testing")))
 
-		array.GetArray()
+	array.GetArray()
 
-		array.GetSlice()
+	array.GetSlice()
 
-		structure.IfTest()
+	structure.IfTest()
 
-		structure.ForTest()
+	structure.ForTest()
 
-		strings2()
+	strings2()
 
-		structure.SwitchTest()
-	*/
+	structure.SwitchTest()
 }
 
 func strings2() {

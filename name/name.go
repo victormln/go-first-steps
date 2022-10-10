@@ -4,8 +4,8 @@ import "fmt"
 
 const insertNameMessage = "Insert your name: "
 
-// GetName obtiene y retorna el nombre
-func GetName() string {
+// AskForName obtiene y retorna el nombre
+func AskForName() string {
 	var name string
 	name = "Default name"
 

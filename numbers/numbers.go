@@ -4,8 +4,8 @@ import "fmt"
 
 const insertAgeMessage = "\nHow old are you?: "
 
-// GetAge returns the user age
-func GetAge() int {
+// AskForAge returns the user age
+func AskForAge() int {
 	var age int
 	fmt.Print(insertAgeMessage)
 	fmt.Scanf("%d", &age)

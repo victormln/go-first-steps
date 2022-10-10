@@ -13,6 +13,7 @@ func IfTest() {
 		fmt.Println("Numero impar")
 	}
 
+	// Set again number2 variable to 3 and compare it to enter inside
 	if number2 := 3; number2 == 3 {
 		fmt.Println("Dentro!")
 	}
@@ -64,15 +65,15 @@ func SwitchTest() {
 
 	switch number {
 	case 1:
-		fmt.Print("El numero es uno")
+		fmt.Println("El numero es uno")
 	default:
-		fmt.Print("Numero no es 1")
+		fmt.Println("Numero no es 1")
 	}
 
 	switch {
 	case number%2 == 0:
-		fmt.Print("El numero es par")
+		fmt.Println("El numero es par")
 	default:
-		fmt.Print("El numero es impar")
+		fmt.Println("El numero es impar")
 	}
 }
